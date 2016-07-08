@@ -1,0 +1,11 @@
+[user]
+	name = Rodrigo López Dato
+	signingkey = CA80FEFA
+	useConfigOnly = true
+[core]
+	autocrlf = input
+	excludesfile = /Users/rolodato/.gitignore_global
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true
