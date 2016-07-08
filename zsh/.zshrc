@@ -100,3 +100,5 @@ fi
 
 export NVM_DIR="/Users/rolodato/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export SSH_AUTH_SOCK="/Users/rolodato/.gnupg/S.gpg-agent.ssh"
