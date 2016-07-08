@@ -7,7 +7,7 @@
         "curl"
         "ffmpeg"
         "git"
-        "gnupg"
+        "gnupg-1.4.20"
         "jq"
         "keychain"
         "nss-cacert"
