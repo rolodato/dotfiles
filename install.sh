@@ -7,11 +7,12 @@ if [ -d "/nix" ]; then
 else
   echo "Downloading and installing Nix..."
   curl https://nixos.org/nix/install | sh
+  source ~/.nix-profile/etc/profile.d/nix.sh
 fi
 
-echo "Installing bootstrap dependencies..."
-nix-env -i git stow
+echo "Installing dependencies..."
+nix-env -i coreutils curl ffmpeg git jq keychain nss-cacert oh-my-zsh-git openssh pinentry stow vim wget zsh
+nix-env -iA nixpkgs.gnupg1
 echo "Dependencies installed. Copying dotfiles."
 stow git gpg nix vim vscode zsh
-echo "Dotfiles copied. Installing everything else..."
-nix-env -i rolodato
+echo "Done! Restart this shell to finish."
