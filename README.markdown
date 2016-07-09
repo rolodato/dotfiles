@@ -7,7 +7,3 @@ Uses [Nix](https://nixos.org/nix/) to handle dependencies and [GNU Stow](https:/
 ```sh
 git clone git@github.com:rolodato/dotfiles.git ~/dotfiles && cd ~/dotfiles && ./install.sh
 ```
-
-## Update
-
-Add dependencies to [`config.nix`](/nix/.nixpkgs/config.nix) and run `nix-env -i rolodato` to install.
