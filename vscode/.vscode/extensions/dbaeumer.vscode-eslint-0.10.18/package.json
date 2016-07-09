@@ -1,0 +1,93 @@
+{
+	"name": "vscode-eslint",
+	"displayName": "ESLint",
+	"description": "Integrates ESLint into VS Code.",
+	"version": "0.10.18",
+	"author": "Microsoft Corporation",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-eslint.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Microsoft/vscode-eslint/issues"
+	},
+	"publisher": "dbaeumer",
+	"icon": "eslint_icon.svg",
+	"categories": [
+		"Linters"
+	],
+	"engines": {
+		"vscode": "^0.10.8"
+	},
+	"activationEvents": [
+		"onLanguage:javascript",
+		"onLanguage:javascriptreact",
+		"onCommand:eslint.executeAutofix"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "ESLint configuration",
+			"properties": {
+				"eslint.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Control whether eslint is enabled for JavaScript files or not."
+				},
+				"eslint.options": {
+					"type": "object",
+					"default": {},
+					"description": "The eslint options object to provide args to the eslint command."
+				},
+				"eslint.trace.server": {
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VSCode and the eslint linter service."
+				}
+			}
+		},
+		"commands": [
+			{
+				"title": "Fix all auto-fixable problems",
+				"category": "ESLint",
+				"command": "eslint.fixAllProblems"
+			}
+		],
+		"jsonValidation": [
+			{
+				"fileMatch": ".eslintrc",
+				"url": "http://json.schemastore.org/eslintrc"
+			},
+			{
+				"fileMatch": ".eslintrc.json",
+				"url": "http://json.schemastore.org/eslintrc"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run update-vscode && cd ../eslint-server && npm run compile && cd ../eslint && tsc -p ./",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"update-vscode": "node ./node_modules/vscode/bin/install",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"vscode": "^0.11.10",
+		"typescript": "^1.8.9"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^2.2.0"
+	},
+	"__metadata": {
+		"id": "583b2b34-2c1e-4634-8c0b-0b82e283ea3a",
+		"publisherId": "29859a75-d81b-4f0e-8578-2c80ecee6f99",
+		"publisherDisplayName": "Dirk Baeumer"
+	}
+}
