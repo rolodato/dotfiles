@@ -11,7 +11,7 @@ else
 fi
 
 echo "Installing dependencies..."
-nix-env -i coreutils curl ffmpeg git jq keychain nss-cacert oh-my-zsh-git openssh pinentry stow vim wget zsh
+nix-env -i coreutils curl ffmpeg git jq keychain nss-cacert oh-my-zsh-git openssh pinentry stow vim wget zsh pwgen unrar jekyll
 nix-env -iA nixpkgs.gnupg1
 echo "Dependencies installed. Copying dotfiles."
 stow git gpg nix vim vscode zsh
