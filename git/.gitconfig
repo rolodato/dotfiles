@@ -1,6 +1,6 @@
 [user]
 	name = Rodrigo López Dato
-	signingkey = CA80FEFA
+	signingkey = B428842D00E7B480
 	useConfigOnly = true
 [core]
 	autocrlf = input
@@ -9,3 +9,6 @@
 	program = gpg2
 [commit]
 	gpgsign = true
+[alias]
+	s = status
+	r = remote -v

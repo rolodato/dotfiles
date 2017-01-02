@@ -7,6 +7,7 @@ module.exports = {
     "rules": {
         "no-trailing-spaces": "error",
         "semi": "error",
-        "indent": ["error", 4]
+        "indent": ["error", 4],
+        "comma-dangle": ["error", "never"]
     }
 };

@@ -1,1 +1,12 @@
 .netrwhist
+secring.gpg
+trustdb.gpg
+pubring.gpg
+pubring.gpg~
+reader_*.status
+RevCerts/
+sk_*.gpg
+crls.d/
+random_seed
+private-keys-v1.d/
+.gpg-agent-info
