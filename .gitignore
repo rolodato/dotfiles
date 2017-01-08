@@ -10,3 +10,5 @@ crls.d/
 random_seed
 private-keys-v1.d/
 .gpg-agent-info
+tmux/.tmux/resurrect
+tmux/.tmux/plugins

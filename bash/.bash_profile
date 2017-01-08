@@ -15,3 +15,13 @@ if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
 else
     eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 fi
+
+[[ -s "/Users/rolodato/.gvm/scripts/gvm" ]] && source "/Users/rolodato/.gvm/scripts/gvm"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/rolodato/.sdkman"
+[[ -s "/Users/rolodato/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rolodato/.sdkman/bin/sdkman-init.sh"
+
+export PATH="$HOME/.cargo/bin:$PATH"
