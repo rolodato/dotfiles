@@ -1,3 +1,9 @@
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+export HISTCONTROL=ignoreboth
+
 export NVM_DIR="/Users/rolodato/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
