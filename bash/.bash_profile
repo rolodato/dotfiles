@@ -31,3 +31,5 @@ export SDKMAN_DIR="/Users/rolodato/.sdkman"
 [[ -s "/Users/rolodato/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rolodato/.sdkman/bin/sdkman-init.sh"
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+eval "$(pyenv init -)"
