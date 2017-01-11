@@ -5,6 +5,7 @@
 [core]
 	autocrlf = input
 	excludesfile = /Users/rolodato/.gitignore_global
+	editor = /usr/bin/vim
 [gpg]
 	program = gpg2
 [commit]
