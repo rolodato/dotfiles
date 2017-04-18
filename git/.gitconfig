@@ -1,6 +1,6 @@
 [user]
 	name = Rodrigo López Dato
-	signingkey = B428842D00E7B480
+	signingkey = 629AED33F024F703
 	useConfigOnly = true
 [core]
 	autocrlf = input
@@ -11,7 +11,7 @@
 [commit]
 	gpgsign = true
 [alias]
-	work = config user.email \"<rodrigo@auth0.com>\"
+	work = config user.email \"<rlopez@medallia.com>\"
 	me = config user.email \"<rolodato@rolodato.com>\"
 	upstream = remote add upstream
 	s = status
